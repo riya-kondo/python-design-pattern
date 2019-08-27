@@ -25,17 +25,18 @@ class Book:
 
 class BookShelf(AggregateInterface):
     def __init__(self, maxSize: int):
-        self.__books = []
-        self.__last = maxSize
+        self.__books = [None]*maxSize
+        self.__last = 0
 
     def getBookAt(self, index: int):
         return self.__books[index]
 
     def appendBook(self, book: Book):
-        self.__books.append(book)
+        self.__books[self.__last] = book
+        self.__last += 1
 
     def getLength(self):
-        return len(self.__books)
+        return self.__last
 
     def iterator(self):
         return BookShelfIterator(self)
