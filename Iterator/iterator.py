@@ -50,6 +50,7 @@ class BookShelfIterator(IteratorInterface):
         if self.__index < self.__bookshelf.getLength():
             return True
         else:
+            self.__index = 00
             return False
 
     def next(self):
