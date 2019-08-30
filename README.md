@@ -9,4 +9,6 @@ above python3
 | Chapter | directory |
 ----|---- 
 | 1. Iterator | Iterator |
-| 2. Adapter | Adapter|
+| 2. Adapter | Adapter |
+| 3. Template Method | TemplateMethod |
+| 4. Factory Method | FactoryMethod | 
